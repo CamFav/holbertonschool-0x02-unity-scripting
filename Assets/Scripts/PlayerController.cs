@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    //Controls velocity multiplier
-    public float speed = 10f;
+    public float speed = 10f; // Controls velocity multiplier
+    private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
     }
 
     // FixedUpdate is called at a fixed interval and is independent of frame rate
@@ -24,6 +24,6 @@ public class NewBehaviourScript : MonoBehaviour
         Vector3 movement = new Vector3(moveHorizontal, 0.0f, moveVertical);
 
         // Move the player
-        transform.Translate(movement * speed * Time.deltaTime, Space.World);
+        rb.AddForce(movement * speed);
     }
 }
