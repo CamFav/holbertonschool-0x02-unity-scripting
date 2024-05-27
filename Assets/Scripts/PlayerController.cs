@@ -6,8 +6,9 @@ public class PlayerController : MonoBehaviour
 {
     public float speed = 10f; // Controls velocity multiplier
     private Rigidbody rb;
-
     private int score =  0;   // Set the initial value of score to 0.
+    public int health = 5;
+
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +40,13 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Score: " + score);
 
             other.gameObject.SetActive(false); // Disable the coin (Destroy(other.gameObject) to destroy it)
+        }
+
+        if (other.CompareTag("Trap"))
+        {
+            health--;
+
+            Debug.Log("Health: "  + health);
         }
     }
 }
