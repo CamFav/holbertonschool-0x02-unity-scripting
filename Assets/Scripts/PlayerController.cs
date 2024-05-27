@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
     public float speed = 10f; // Controls velocity multiplier
     private Rigidbody rb;
 
+    private int score =  0;   // Set the initial value of score to 0.
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,5 +27,18 @@ public class PlayerController : MonoBehaviour
 
         // Move the player
         rb.AddForce(movement * speed);
+    }
+
+    // Increment the value of score when the Player touches an object tagged Pickup
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Pickup")) // Check if player collides with a object tagged Pickup (coin)
+        {
+            score++;
+
+            Debug.Log("Score: " + score);
+
+            other.gameObject.SetActive(false); // Disable the coin (Destroy(other.gameObject) to destroy it)
+        }
     }
 }

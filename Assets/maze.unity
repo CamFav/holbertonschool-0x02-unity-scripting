@@ -6023,31 +6023,11 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 5070078970871813533, guid: 8fad9bbd1baf3d54a86aaffa23ecdca2,
-        type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5070078970871813533, guid: 8fad9bbd1baf3d54a86aaffa23ecdca2,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6052289635326132518, guid: 8fad9bbd1baf3d54a86aaffa23ecdca2,
         type: 3}
       propertyPath: m_Name
       value: Trap
       objectReference: {fileID: 0}
-    - target: {fileID: 6052289635326132518, guid: 8fad9bbd1baf3d54a86aaffa23ecdca2,
-        type: 3}
-      propertyPath: m_TagString
-      value: Trap
-      objectReference: {fileID: 0}
-    - target: {fileID: 6916798637924246375, guid: 8fad9bbd1baf3d54a86aaffa23ecdca2,
-        type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 1217a635da1b8cf45a5c64ee23331f79, type: 2}
     - target: {fileID: 7452448536348006406, guid: 8fad9bbd1baf3d54a86aaffa23ecdca2,
         type: 3}
       propertyPath: m_LocalPosition.x
